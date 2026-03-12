@@ -10,23 +10,23 @@ import { useState } from 'react';
 
 function App() {
 
-  const [buttonContent , setContent] = useState("all-tasks");
+ const [buttonContent , setButtonContent] = useState("all-tasks");
 
-  function handleButton(newContent){
-    setContent(newContent)
-  }
+ function handleButton(content){
+    setButtonContent(content);
+ }
 
   return (
     <div>
       <nav>
-        <NavButton click={() => handleButton("all-tasks")}>All Tasks</NavButton>
-        <NavButton click={() => handleButton("pending-tasks")}>Pending Tasks</NavButton>
-        <NavButton click={() => handleButton("completed-tasks")}>Completed Tasks</NavButton>
+        <NavButton click={() => handleButton("all-tasks")}>All tasks</NavButton>
+        <NavButton click={() => handleButton("pending-tasks")}>Pending tasks</NavButton>
+        <NavButton click={() => handleButton("completed-tasks")}>Completed tasks</NavButton>              
       </nav>
       <main>
-        {buttonContent === "all-tasks" && <AllTasks></AllTasks>}
-        {buttonContent === "pending-tasks" && <PendingTasks></PendingTasks>}
-        {buttonContent === "completed-tasks" && <CompletedTasks></CompletedTasks>}
+        {buttonContent === 'all-tasks' && <AllTasks></AllTasks>}
+        {buttonContent === 'pending-tasks' && <PendingTasks></PendingTasks>}
+        {buttonContent === 'completed-tasks' && <CompletedTasks></CompletedTasks>}
       </main>
     </div>
     
