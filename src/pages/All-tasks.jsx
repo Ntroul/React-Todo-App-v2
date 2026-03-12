@@ -7,7 +7,7 @@ export default function AllTasks() {
 
 
     function addTask() {
-        setTasks([tasks, task])
+        setTasks([...tasks, task])
     }
 
     return (
