@@ -26,7 +26,9 @@ export default function AllTasks() {
                 </div>
                 <div className="tasks">
                     {tasks.map((todos, index) => (
-                        <p key={index}>{todos}</p>
+                        <div className='task-item' key={index}>
+                            {todos}
+                        </div>
                     ))}
                 </div>
             </div>
