@@ -1,3 +1,5 @@
+import './All-tasks.css';
+
 import { useState } from "react";
 
 export default function AllTasks() {
@@ -14,6 +16,7 @@ export default function AllTasks() {
         <div className="all-tasks-container">
             <div className="header">
                 <h2>All your Tasks</h2>
+                <p>View and manage all your tasks in one place</p>
             </div>
             <div className="Tasks-section">
                 <div className="user-input">

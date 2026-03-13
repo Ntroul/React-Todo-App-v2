@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+   
+}
+
+.layout{
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.side-bar{
+  width: 220px;
+  background: #1e293b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Page Content */
+.content{
+  flex: 1;
+  padding: 30px;
+}

@@ -17,13 +17,13 @@ function App() {
  }
 
   return (
-    <div>
-      <nav>
+    <div className="layout">
+      <nav className="side-bar">
         <NavButton click={() => handleButton("all-tasks")}>All tasks</NavButton>
         <NavButton click={() => handleButton("pending-tasks")}>Pending tasks</NavButton>
         <NavButton click={() => handleButton("completed-tasks")}>Completed tasks</NavButton>              
       </nav>
-      <main>
+      <main className='content'>
         {buttonContent === 'all-tasks' && <AllTasks></AllTasks>}
         {buttonContent === 'pending-tasks' && <PendingTasks></PendingTasks>}
         {buttonContent === 'completed-tasks' && <CompletedTasks></CompletedTasks>}

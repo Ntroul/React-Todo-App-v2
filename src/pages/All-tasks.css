@@ -1,0 +1,84 @@
+.all-tasks-container{
+  max-width:700px;
+  margin:auto;
+}
+
+/* Header */
+
+.header h2{
+  margin:0;
+  font-size:28px;
+}
+
+.header p{
+  color:#64748b;
+  margin-top:5px;
+}
+
+/* Card */
+
+.Tasks-section{
+  margin-top:25px;
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Input area */
+
+.user-input{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.user-input input{
+  flex:1;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #e2e8f0;
+  font-size:14px;
+}
+
+.user-input input:focus{
+  outline:none;
+  border-color:#3b82f6;
+}
+
+/* Add button */
+
+.user-input button{
+  width:40px;
+  border:none;
+  border-radius:8px;
+  background:#3b82f6;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.user-input button:hover{
+  background:#2563eb;
+}
+
+/* Tasks list */
+
+.tasks{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.task-item{
+  background:#f8fafc;
+  padding:12px 15px;
+  border-radius:8px;
+  border:1px solid #e2e8f0;
+  transition:0.2s;
+}
+
+.task-item:hover{
+  background:#f1f5f9;
+}
