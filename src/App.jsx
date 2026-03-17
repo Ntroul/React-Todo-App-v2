@@ -4,6 +4,7 @@ import NavButton from './components/navButton';
 import AllTasks from './pages/All-tasks';
 import PendingTasks from './pages/Pending-Tasks';
 import CompletedTasks from './pages/Completed-Tasks';
+import Calendar from './pages/Calendar';
 
 import { useState } from 'react';
 
@@ -19,14 +20,18 @@ function App() {
   return (
     <div className="layout">
       <nav className="side-bar">
+        <div className='logo'>Kane-To</div>
         <NavButton click={() => handleButton("all-tasks")}>All tasks</NavButton>
         <NavButton click={() => handleButton("pending-tasks")}>Pending tasks</NavButton>
-        <NavButton click={() => handleButton("completed-tasks")}>Completed tasks</NavButton>              
+        <NavButton click={() => handleButton("completed-tasks")}>Completed tasks</NavButton>
+        <NavButton click={() => handleButton("achivements")}>Achivements</NavButton>
+        <NavButton click={() => handleButton("calendar")}>Calendar</NavButton>              
       </nav>
       <main className='content'>
         {buttonContent === 'all-tasks' && <AllTasks></AllTasks>}
         {buttonContent === 'pending-tasks' && <PendingTasks></PendingTasks>}
         {buttonContent === 'completed-tasks' && <CompletedTasks></CompletedTasks>}
+        {buttonContent === 'calendar' && <Calendar></Calendar>}
       </main>
     </div>
     

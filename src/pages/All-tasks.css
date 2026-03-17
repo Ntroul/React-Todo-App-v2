@@ -43,7 +43,7 @@
 
 .user-input input:focus{
   outline:none;
-  border-color:#3b82f6;
+  border-color:#1e293b;
 }
 
 /* Add button */
@@ -52,7 +52,7 @@
   width:40px;
   border:none;
   border-radius:8px;
-  background:#3b82f6;
+  background: #1e293b;
   color:white;
   font-size:20px;
   cursor:pointer;
@@ -60,7 +60,7 @@
 }
 
 .user-input button:hover{
-  background:#2563eb;
+  background:#1e293b;
 }
 
 /* Tasks list */
@@ -81,4 +81,50 @@
 
 .task-item:hover{
   background:#f1f5f9;
+}
+
+.task-item-button{
+  color: #fff;
+  background-color: #ca0606;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #ca0606;
+  border-radius: 10px;
+}
+
+.task-item-button-edit{
+   color: #fff;
+  background-color: #064bca;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #064bca;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.task-coounter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.task-coounter .grey{
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #333;
+  border-radius: 20px;
+}
+
+.task-coounter .red{
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #f30e0e;
+  border-radius: 20px;
+}
+
+.task-coounter .green{
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #13d70f;
+  border-radius: 20px;
 }
