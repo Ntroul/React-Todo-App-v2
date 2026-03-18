@@ -11,13 +11,24 @@ export default function AllTasks() {
         console.log("editWorks")
     }
 
-    function deleteTask(){
-        console.log("deleteWorks")
+    function deleteTask(id){
+        setTasks(tasks.filter(task => task.id !== id))
     }
 
     function addTask() {
-        setTasks([...tasks, task])
+        const newTask = {
+        id: Date.now(),
+        title: task,
+        completed: false
+    };
+
+        setTasks([...tasks, newTask]);
+        setTask("");
     }
+
+    const total = tasks.length;
+    const pending = tasks.filter(task => !task.completed).length;
+    const completed = tasks.filter(task => task.completed).length;
 
     return (
         <div className="all-tasks-container">
@@ -26,22 +37,23 @@ export default function AllTasks() {
                 <p>View and manage all your tasks in one place</p>
             </div>
             <div className='task-coounter'>
-                <p className='grey'>1 task</p>
-                <p className='red'>1 pending</p>
-                <p className='green'>1 Completed</p>
+                <p className='grey'>{total} task</p>
+                <p className='red'>{pending} pending</p>
+                <p className='green'>{completed} Completed</p>
             </div>
             <div className="Tasks-section">
                 <div className="user-input">
                     <label htmlFor="task-input">Write a Task</label>
                     <input type="text" onChange={(e) => setTask(e.target.value)}></input>
-                    <button type="submit" onClick={addTask}>+</button>
+                    <button type="submit" onClick={addTask} disabled={task === ""}>+</button>
                 </div>
                 <div className="tasks">
-                    {tasks.map((todos) => (
-                        <div className='task-item' key={todos.id}>
-                            {todos}
+                    {tasks.map((todo) => (
+                        <div className='task-item' key={todo.id}>
+                        <input type="checkbox" className='item-checkbox'></input>
+                            {todo.title}
                         <button onClick={editTask} className='task-item-button-edit'>Edit</button>
-                        <button onClick={deleteTask} className='task-item-button'>Delete</button>
+                        <button onClick={() => deleteTask(todo.id)} className='task-item-button'>Delete</button>
                         </div>
                     ))}
                 </div>
