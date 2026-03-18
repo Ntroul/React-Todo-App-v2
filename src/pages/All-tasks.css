@@ -108,21 +108,21 @@
   margin: 20px;
 }
 
-.task-coounter .grey{
+.grey{
   padding: 20px;
   margin: 10px;
   border: 1px solid #333;
   border-radius: 20px;
 }
 
-.task-coounter .red{
+.red{
   padding: 20px;
   margin: 10px;
   border: 1px solid #f30e0e;
   border-radius: 20px;
 }
 
-.task-coounter .green{
+.green{
   padding: 20px;
   margin: 10px;
   border: 1px solid #13d70f;

@@ -29,3 +29,24 @@
   font-size: 35px;
   padding-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .side-bar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    min-width: 120px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .logo {
+    display: none;
+  }
+}
