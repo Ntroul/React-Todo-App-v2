@@ -21,11 +21,11 @@ function App() {
     <div className="layout">
       <nav className="side-bar">
         <div className='logo'>Kane-To</div>
-        <NavButton click={() => handleButton("all-tasks")}>All tasks</NavButton>
-        <NavButton click={() => handleButton("pending-tasks")}>Pending tasks</NavButton>
-        <NavButton click={() => handleButton("completed-tasks")}>Completed tasks</NavButton>
-        <NavButton click={() => handleButton("achivements")}>Achivements</NavButton>
-        <NavButton click={() => handleButton("calendar")}>Calendar</NavButton>              
+        <NavButton active={buttonContent === "all-tasks"} click={() => handleButton("all-tasks")}>All tasks</NavButton>
+        <NavButton active={buttonContent === "pending-tasks"} click={() => handleButton("pending-tasks")}>Pending tasks</NavButton>
+        <NavButton active={buttonContent === "completed-tasks"} click={() => handleButton("completed-tasks")}>Completed tasks</NavButton>
+        <NavButton active={buttonContent === "achivements"} click={() => handleButton("achivements")}>Achivements</NavButton>
+        <NavButton active={buttonContent === "calendar"} click={() => handleButton("calendar")}>Calendar</NavButton>              
       </nav>
       <main className='content'>
         {buttonContent === 'all-tasks' && <AllTasks></AllTasks>}

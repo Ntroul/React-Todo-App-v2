@@ -1,5 +1,5 @@
-export default function NavButton({children , click}) {
+export default function NavButton({children , click , active}) {
     return(
-        <button onClick={click}>{children}</button>
+        <button onClick={click} className={`nav-button ${active ? "active" : ""}`}>{children}</button>
     )
 }

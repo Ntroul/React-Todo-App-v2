@@ -17,12 +17,12 @@
 
 /* Card */
 
-.Tasks-section{
+.tasks-section {
   margin-top:25px;
   background:white;
   padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
 
 /* Input area */
@@ -36,10 +36,10 @@
   
 }
 
-.user-input input{
+.user-input input {
   flex:1;
-  padding:12px;
-  border-radius:8px;
+  padding:12px 16px;
+  border-radius:10px;
   border:1px solid #e2e8f0;
   font-size:14px;
 }
@@ -51,19 +51,15 @@
 
 /* Add button */
 
-.user-input button{
-  width:40px;
-  border:none;
-  border-radius:8px;
-  background: #1e293b;
-  color:white;
-  font-size:20px;
-  cursor:pointer;
-  transition:0.2s;
+.user-input button {
+  width:45px;
+  height:45px;
+  border-radius:10px;
+  font-size:22px;
 }
 
 .user-input button:hover{
-  background:#1e293b;
+  background:#d6d6d6;
 }
 
 /* Tasks list */
@@ -75,6 +71,10 @@
 }
 
 .task-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   background:#f8fafc;
   padding:12px 15px;
   border-radius:8px;
@@ -85,27 +85,27 @@
 
 .task-item:hover{
   background:#f1f5f9;
+  transform: translateY(-2px);
 }
 
-.task-item-button{
-  color: #fff;
-  background-color: #ca0606;
-  padding: 5px 10px 5px 10px;
-  border: 1px solid #ca0606;
-  border-radius: 10px;
+.task-item-button,
+.task-item-button-edit {
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.task-item-button-edit{
-   color: #fff;
-  background-color: #064bca;
-  padding: 5px 10px 5px 10px;
-  border: 1px solid #064bca;
-  border-radius: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+.task-item-button:hover {
+  opacity: 0.8;
 }
 
-.task-coounter{
+.task-item-button-edit:hover {
+  opacity: 0.8;
+}
+
+.task-counter{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,4 +131,27 @@
   margin: 10px;
   border: 1px solid #13d70f;
   border-radius: 20px;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.item-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #1e293b;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
 }

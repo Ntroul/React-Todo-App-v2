@@ -36,12 +36,12 @@ export default function AllTasks() {
                 <h2>All your Tasks</h2>
                 <p>View and manage all your tasks in one place</p>
             </div>
-            <div className='task-coounter'>
+            <div className='task-counter'>
                 <p className='grey'>{total} task</p>
                 <p className='red'>{pending} pending</p>
                 <p className='green'>{completed} Completed</p>
             </div>
-            <div className="Tasks-section">
+            <div className="tasks-section">
                 <div className="user-input">
                     <label htmlFor="task-input">Write a Task</label>
                     <input type="text" onChange={(e) => setTask(e.target.value)}></input>
@@ -50,11 +50,17 @@ export default function AllTasks() {
                 <div className="tasks">
                     {tasks.map((todo) => (
                         <div className='task-item' key={todo.id}>
-                        <input type="checkbox" className='item-checkbox'></input>
-                            {todo.title}
-                        <button onClick={editTask} className='task-item-button-edit'>Edit</button>
-                        <button onClick={() => deleteTask(todo.id)} className='task-item-button'>Delete</button>
+                         <div className="task-left">
+                            <input type="checkbox" className='item-checkbox'></input>
+                            <span className={todo.completed ? "completed" : ""}>
+                                {todo.title}
+                            </span>
                         </div>
+                        <div className='task-actions'>
+                            <button onClick={editTask} className='task-item-button-edit'>Edit</button>
+                            <button onClick={() => deleteTask(todo.id)} className='task-item-button'>Delete</button>
+                        </div>
+                    </div>
                     ))}
                 </div>
             </div>

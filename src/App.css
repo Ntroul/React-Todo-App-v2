@@ -9,25 +9,41 @@
 }
 
 /* Sidebar */
-.side-bar{
-  width: 220px;
-  background: #fff;
+.side-bar {
+  width: 240px;
+  background: #ffffff;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-right: 1px solid #e2e8f0;
 }
 
-/* Page Content */
-.content{
-  flex: 1;
-  padding: 30px;
-  background-color: #f3f3f3;
+.nav-button {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.logo{
-  color: #000;
-  font-size: 35px;
-  padding-bottom: 10px;
+
+.nav-button:hover {
+  background: #f1f5f9;
+}
+
+.nav-button.active {
+  background: #1e293b;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f8fafc;
+}
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
